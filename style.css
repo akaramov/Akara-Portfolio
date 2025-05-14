@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Press Start 2P", Roboto​​, Kantumruy Pro;
+  background-color: #f564a9;
+  color: #fff;
+  padding: 20px;
+}
+
+.portfolio {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #fae3c6;
+  color: #000;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  animation: slideIn 1.5s ease-out;
+  box-shadow: 1px 1px 2px black;
+}
+
+.profile {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Hello World Rainbow Flicker */
+.hello-world {
+  background: #faa4bd;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  color: black;
+  animation: flicker 1.5s infinite alternate;
+  box-shadow: 1px 1px 2px black;
+}
+
+/* Education */
+.education,
+.skills {
+  background-color: #f0c420;
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in;
+  box-shadow: 2px 2px 2px black;
+}
+
+/* Skills Block */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #ff7722;
+}
+
+.design-skills,
+.software-skills {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+ul {
+  margin-top: 10px;
+  list-style: square;
+  padding-left: 20px;
+}
+footer {
+  align-items: center;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills {
+    flex-direction: column;
+  }
+
+  .design-skills,
+  .software-skills {
+    width: 100%;
+  }
+
+  .hello-world {
+    font-size: 1em;
+    padding: 15px;
+  }
+}
